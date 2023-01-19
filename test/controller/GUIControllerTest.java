@@ -23,6 +23,5 @@ public class GUIControllerTest {
     con.actionPerformed(e);
 
 
-    // HOW TO ASSET EQUALS THIS?????
   }
 }
