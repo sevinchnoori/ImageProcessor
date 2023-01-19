@@ -1,0 +1,336 @@
+USE ME
+ASSIGNMENT 5 - Image Processing
+Sevinch Noori and Aishu Vinod
+
+Introduction: Our command line can run a variety of inputs including loading, saving, a vertical
+flip, a horizontal flip, brightening, darkening, getting the intensity, luma, or value, and
+getting the red component, blue component, or green component. Some added features also include
+being able to blur or sharpen the image and also apply either a sepia or greyscale filter to the
+image. You can run these script commands in the command line set up through the main method to run
+these functions. All of these operations can be applied to ppm, jpg, png, and bpm image types.
+
+Format for running commands in the command line :
+Start with entering what you would like to do. Your options include:
+load (loads a given image into the image processor)
+save (saves the current image in the processor to the user’s specified location)
+red-component (creates a greyscale with the red values of the image)
+blue-component (creates a greyscale with the blue values of the image)
+green-component creates a greyscale with the green values of the image)
+value-component (creates an image with the max value component)
+intensity-component (creates an image with the intensity component which is the average of the
+three components of each pixel)
+luma-component (creates an image with the luma component which is the weighted sum of .2126r
++ .7152g+.0722b)
+vertical-flip (vertically flips the image)
+horizontal-flip (horizontaly flips the image)
+brighten (brightens the image)
+darken (darkens the image)
+blur (blurs the image)
+sharpen (sharpens the image)
+greyscale (applies a greyscale filter to the image)
+sepia (applies a sepia filter to the image)
+
+- If you want to load, your second argument should be the file path to the image you want to load.
+- If you want to save, your second argument should be the file path where you want to save along
+with the new name of the file you want to save it as.
+- If you want to brighten or darken, your second argument should be the number by which you want to
+brighten or darken the pixels of the image.
+- If you want to perform an operation, your second argument should be the name of the
+file you had assigned to it while loading (will become more clear in step 3)
+
+- If you want to load, your third argument should be a new temporary name you want to assign to the
+file
+- If you want to save, your third argument should be the temporary name that you had assigned to the
+ image in your previous operation.
+- If you want to perform an operation, your third argument should be a new temporary
+name you want to assign to the file representing the file after that operation.
+- If you want to brighten or darken, your third argument should be the temporary name that you had
+assigned to the image in your previous operation.
+- If you want to brighten or darken, the fourth argument should be a new temporary
+name you want to assign to the file representing the file after that operation.
+
+
+Examples
+
+LOAD
+load ./res/googleSMALL.jpg j
+
+- Here, an image is being loaded where the user provides the file path and then the temporary name
+they want to load the file as. While loading, the format always needs to be “load”, the image file
+path, and then the new name the user wants to load as.
+- Conditions:
+    - Must be in the image format of ppm, jpg, jpeg, or bmp.
+    - Must be the first command entered into the program
+    - Must follow the format of load image-path image-name
+
+RED COMPONENT
+load  ./res/colorblock.ppm cb
+red-component  cb red
+save ./res/colorblock-red.ppm red
+
+
+- Here, an image is being loaded where the user provides the file path and then the temporary name
+they want to load the file as.
+- Then the red-component operation is applied on the image and it
+takes in the file name as stored currently in the processor and then the new name it is to be
+saved as after the operation.
+- Finally, the user can save by providing the file path they want to save it to along with the
+name of the image that they want saved.
+- Conditions:
+    - Image must be loaded
+    - Can come after any command if the image is loaded
+    - Must follow the format of red-component image-name dest-image-name
+
+
+GREEN COMPONENT
+load  ./res/colorblock.ppm cb
+green-component  cb green
+save ./res/colorblock-green.ppm green
+
+- Here, an image is being loaded where the user provides the file path and then the temporary name
+they want to load the file as.
+- Then the green-component operation is applied on the image and it takes in the file name as
+stored currently in the processor and then the new name it is to be saved as after the operation.
+- Finally, the user can save by providing the file path they want to save
+it to along with the name of the image that they want saved.
+- Conditions:
+    - Image must be loaded
+    - Can come after any command if the image is loaded
+    - Must follow the format of green-component image-name dest-image-name
+
+
+
+BLUE COMPONENT
+load  ./res/colorblock.ppm cb
+blue-component  cb blue
+save ./res/colorblock-blue.ppm blue
+
+- Here, an image is being loaded where the user provides the file path and then the temporary name
+they want to load the file as.
+- Then the blue-component operation is applied on the image and it
+takes in the file name as stored currently in the processor and then the new name it is to be
+saved as after the operation.
+- Finally, the user can save by providing the file path they want to
+save it to along with the name of the image that they want saved.
+- Conditions:
+    - Image must be loaded
+    - Can come after any command if the image is loaded
+    - Must follow the format of blue-component image-name dest-image-name
+
+
+
+LUMA COMPONENT
+load  ./res/colorblock.ppm cb
+luma-component  cb luma
+save ./res/colorblock-luma.ppm luma
+
+- Here, an image is being loaded where the user provides the file path and then the temporary name
+they want to load the file as.
+- Then the luma-component operation is applied on the image and it takes in the file name as
+stored currently in the processor and then the new name it is to be saved as after the operation.
+- Finally, the user can save by providing the file path they want to save it
+to along with the name of the image that they want saved.
+- Conditions:
+    - Image must be loaded
+    - Can come after any command if the image is loaded
+    - Must follow the format of luma-component image-name dest-image-name
+
+
+INTENSITY COMPONENT
+load  ./res/colorblock.ppm cb
+intensity-component  cb intensity
+save ./res/colorblock-intensity.ppm intensity
+
+- Here, an image is being loaded where the user provides the file path and then the temporary name
+they want to load the file as.
+- Then the intensity-component operation is applied on the image and it takes in the file name as
+stored currently in the processor and then the new name it is to be saved as after the operation.
+- Finally, the user can save by providing the file path they want to
+save it to along with the name of the image that they want saved.
+- Conditions:
+    - Image must be loaded
+    - Can come after any command if the image is loaded
+    - Must follow the format of intensity-component image-name dest-image-name
+
+
+VALUE COMPONENT
+load  ./res/colorblock.ppm cb
+value-component  cb value
+save ./res/colorblock-value.ppm value
+
+- Here, an image is being loaded where the user provides the file path and then the temporary name
+they want to load the file as.
+- Then the value-component operation is applied on the image and it takes in the file name as
+stored currently in the processor and then the new name it is to be
+saved as after the operation.
+- Finally, the user can save by providing the file path they want to save it to along with the
+name of the image that they want saved.
+- Conditions:
+    - Image must be loaded
+    - Can come after any command if the image is loaded
+    - Must follow the format of value-component image-name dest-image-name
+
+
+VERTICAL FLIP
+load  ./res/colorblock.ppm cb
+vertical-flip  cb vflip
+save ./res/colorblock-vertical.ppm vflip
+
+- Here, an image is being loaded where the user provides the file path and then the temporary name
+they want to load the file as.
+- Then the vertical-flip operation is applied on the image and it takes in the file name as
+stored currently in the processor and then the new name it is to be saved as after the flip.
+- Finally, the user can save by providing the file path they want to
+save it to along with the name of the image that they want saved.
+- Conditions:
+    - Image must be loaded
+    - Can come after any command if the image is loaded
+    - Must follow the format of vertical-flip image-name dest-image-name
+
+
+HORIZONTAL FLIP
+load  ./res/colorblock.ppm cb
+horizontal-flip  cb hflip
+save ./res/colorblock-horizontal.ppm hflip
+
+- Here, an image is being loaded where the user provides the file path and then the temporary name
+they want to load the file as.
+- Then the horizontal-flip operation is applied on the image and it takes in the file name as
+stored currently in the processor and then the new name it is to be saved as after the flip.
+- Finally, the user can save by providing the file path they want to save it to along with the
+name of the image that they want saved.
+- Conditions:
+    - Image must be loaded
+    - Can come after any command if the image is loaded
+    - Must follow the format of horizontal-flip image-name dest-image-name
+
+
+
+
+BRIGHTEN
+load  ./res/colorblock.ppm cb
+brighten 20 cb brighten
+save ./res/colorblock-brightened.ppm brighten
+
+- Here, an image is being loaded where the user provides the file path and then the temporary name
+they want to load the file as.
+- Then the brighten operation is applied on the image along with the integer the user
+(20, in this case) wants to brighten the image by.
+- It then also takes in the file name as stored currently in the processor and then the new name
+it is to be saved as after the operation. Finally, the user can save by providing the file path
+they want to save it to along with the name of the image that they want saved.
+- Conditions:
+    - Image must be loaded
+    - Can come after any command if the image is loaded
+    - Must follow the format of brighten increment-value image-name dest-image-name
+
+
+
+DARKEN
+load  ./res/colorblock.ppm cb
+darken 20 cb darken
+save ./res/colorblock-darkened.ppm darken
+
+- Here, an image is being loaded where the user provides the file path and then the temporary name
+they want to load the file as.
+- Then the darken operation is applied on the image along with the integer the user
+(20, in this case) wants to brighten the image by.
+- It then also takes in the file name as stored currently in the processor and then the new name
+it is to be saved as after the operation. Finally, the user can save by providing the file path
+they want to save it to along with the name of the image that they want saved.
+- Conditions:
+    - Image must be loaded
+    - Can come after any command if the image is loaded
+    - Must follow the format of darken decrement-value image-name dest-image-name
+
+
+
+BLUR
+load ./res/googleSMALL.jpg j
+blur j j-blur
+save ./res/google-sharpen.jpg j-sharpen
+
+- Here, an image is being loaded where the user provides the file path and then the temporary name
+they want to load the file as.
+- Then the blur operation is applied on the image and it takes in the
+file name as stored currently in the processor and then the new name it is to be saved as after the
+ operation.
+ - Finally, the user can save by providing the file path they want to save it to along
+  with the name of the image that they want saved.
+- Conditions:
+    - Image must be loaded
+    - Can come after any command if the image is loaded
+    - Must follow the format of blur image-name dest-image-name
+
+
+
+SHARPEN
+load ./res/googleSMALL.jpg j
+sharpen j j-sharpen
+save ./res/google-sharpen.jpg j-sharpen
+
+- Here, an image is being loaded where the user provides the file path and then the temporary name
+they want to load the file as.
+- Then the sharpen operation is applied on the image and it takes in
+the file name as stored currently in the processor and then the new name it is to be saved as after
+the operation.
+- Finally, the user can save by providing the file path they want to save it to along
+with the name of the image that they want saved.
+- Conditions:
+    - Image must be loaded
+    - Can come after any command if the image is loaded
+    - Must follow the format of sharpen image-name dest-image-name
+
+
+SEPIA
+load ./res/googleSMALL.jpg j
+sepia j j-sepia
+save ./res/google-sepia.jpg j-sepia
+
+- Here, an image is being loaded where the user provides the file path and then the temporary name
+they want to load the file as.
+- Then the sepia filter is applied on the image and it takes in the
+file name as stored currently in the processor and then the new name it is to be saved as after the
+operation.
+- Finally, the user can save by providing the file path they want to save it to along with
+the name of the image that they want saved.
+- Conditions:
+    - Image must be loaded
+    - Can come after any command if the image is loaded
+    - Must follow the format of sepia image-name dest-image-name
+
+
+GREYSCALE
+load ./res/googleSMALL.jpg j
+greyscale j j-greyed
+save ./res/google-greyscale.jpg j-greyed
+
+- Here, an image is being loaded where the user provides the file path and then the temporary name
+they want to load the file as.
+- Then the greyscale filter is applied on the image and it takes in
+the file name as stored currently in the processor and then the new name it is to be saved as
+after the operation.
+- Finally, the user can save by providing the file path they want to save it to
+along with the name of the image that they want saved.
+- Conditions:
+    - Image must be loaded
+    - Can come after any command if the image is loaded
+    - Must follow the format of sepia image-name dest-image-name
+
+
+SAVE
+save ./res/googleSMALL.jpg j
+
+- Here, an image is being saved where the user provides the file path to where you want to save
+the image to along with the name you want to save it as.
+- The “j” is also the temporary name that the user had previously given to the image that they are
+ now trying to save.
+
+
+
+
+
+
+
+
+
